@@ -68,7 +68,7 @@ module Google
         # @param [Google::Apis::DiscoveryV1::RestMethod] method
         #  Fragment of the discovery doc describing the method
         def infer_method_name(method)
-          pick_name(infer_method_name_for_rpc(method) || infer_method_name_from_id(method))
+          pick_name(infer_method_name_from_id(method))
         end
 
         def infer_property_name

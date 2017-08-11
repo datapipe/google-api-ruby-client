@@ -665,7 +665,7 @@ module Google
         # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
         # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
         # @raise [Google::Apis::AuthorizationError] Authorization is required
-        def delete_marketplacedeal_order_deals(proposal_id, delete_order_deals_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
+        def delete_marketplacedeal(proposal_id, delete_order_deals_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, 'proposals/{proposalId}/deals/delete', options)
           command.request_representation = Google::Apis::AdexchangebuyerV1_4::DeleteOrderDealsRequest::Representation
           command.request_object = delete_order_deals_request_object

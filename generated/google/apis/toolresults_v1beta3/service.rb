@@ -827,7 +827,7 @@ module Google
         # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
         # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
         # @raise [Google::Apis::AuthorizationError] Authorization is required
-        def publish_step_xunit_xml_files(project_id, history_id, execution_id, step_id, publish_xunit_xml_files_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
+        def publish_project_history_execution_step_xunit_xml_files(project_id, history_id, execution_id, step_id, publish_xunit_xml_files_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}:publishXunitXmlFiles', options)
           command.request_representation = Google::Apis::ToolresultsV1beta3::PublishXunitXmlFilesRequest::Representation
           command.request_object = publish_xunit_xml_files_request_object
@@ -1084,7 +1084,7 @@ module Google
         # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
         # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
         # @raise [Google::Apis::AuthorizationError] Authorization is required
-        def batch_create_perf_samples(project_id, history_id, execution_id, step_id, sample_series_id, batch_create_perf_samples_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
+        def batch_project_history_execution_step_perf_sample_series_sample_create(project_id, history_id, execution_id, step_id, sample_series_id, batch_create_perf_samples_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples:batchCreate', options)
           command.request_representation = Google::Apis::ToolresultsV1beta3::BatchCreatePerfSamplesRequest::Representation
           command.request_object = batch_create_perf_samples_request_object

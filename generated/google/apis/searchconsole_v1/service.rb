@@ -66,7 +66,7 @@ module Google
         # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
         # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
         # @raise [Google::Apis::AuthorizationError] Authorization is required
-        def run_mobile_friendly_test(run_mobile_friendly_test_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
+        def run_url_testing_tool_mobile_friendly_test(run_mobile_friendly_test_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/urlTestingTools/mobileFriendlyTest:run', options)
           command.request_representation = Google::Apis::SearchconsoleV1::RunMobileFriendlyTestRequest::Representation
           command.request_object = run_mobile_friendly_test_request_object

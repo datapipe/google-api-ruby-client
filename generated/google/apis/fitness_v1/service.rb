@@ -510,7 +510,7 @@ module Google
         # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
         # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
         # @raise [Google::Apis::AuthorizationError] Authorization is required
-        def aggregate_dataset(user_id, aggregate_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
+        def aggregate_user_dataset(user_id, aggregate_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{userId}/dataset:aggregate', options)
           command.request_representation = Google::Apis::FitnessV1::AggregateRequest::Representation
           command.request_object = aggregate_request_object

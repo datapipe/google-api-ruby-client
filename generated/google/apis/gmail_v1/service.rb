@@ -767,7 +767,7 @@ module Google
         # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
         # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
         # @raise [Google::Apis::AuthorizationError] Authorization is required
-        def batch_delete_messages(user_id, batch_delete_messages_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
+        def batch_user_message_delete(user_id, batch_delete_messages_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{userId}/messages/batchDelete', options)
           command.request_representation = Google::Apis::GmailV1::BatchDeleteMessagesRequest::Representation
           command.request_object = batch_delete_messages_request_object
@@ -804,7 +804,7 @@ module Google
         # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
         # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
         # @raise [Google::Apis::AuthorizationError] Authorization is required
-        def batch_modify_messages(user_id, batch_modify_messages_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
+        def batch_user_message_modify(user_id, batch_modify_messages_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{userId}/messages/batchModify', options)
           command.request_representation = Google::Apis::GmailV1::BatchModifyMessagesRequest::Representation
           command.request_object = batch_modify_messages_request_object
@@ -1103,7 +1103,7 @@ module Google
         # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
         # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
         # @raise [Google::Apis::AuthorizationError] Authorization is required
-        def modify_message(user_id, id, modify_message_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
+        def modify_user_message(user_id, id, modify_message_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{userId}/messages/{id}/modify', options)
           command.request_representation = Google::Apis::GmailV1::ModifyMessageRequest::Representation
           command.request_object = modify_message_request_object
@@ -2570,7 +2570,7 @@ module Google
         # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
         # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
         # @raise [Google::Apis::AuthorizationError] Authorization is required
-        def modify_thread(user_id, id, modify_thread_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
+        def modify_user_thread(user_id, id, modify_thread_request_object = nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           command =  make_simple_command(:post, '{userId}/threads/{id}/modify', options)
           command.request_representation = Google::Apis::GmailV1::ModifyThreadRequest::Representation
           command.request_object = modify_thread_request_object

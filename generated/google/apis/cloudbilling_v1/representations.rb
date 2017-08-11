@@ -22,13 +22,7 @@ module Google
   module Apis
     module CloudbillingV1
       
-      class ProjectBillingInfo
-        class Representation < Google::Apis::Core::JsonRepresentation; end
-      
-        include Google::Apis::Core::JsonObjectSupport
-      end
-      
-      class ListProjectBillingInfoResponse
+      class BillingAccount
         class Representation < Google::Apis::Core::JsonRepresentation; end
       
         include Google::Apis::Core::JsonObjectSupport
@@ -40,19 +34,33 @@ module Google
         include Google::Apis::Core::JsonObjectSupport
       end
       
-      class BillingAccount
+      class ListProjectBillingInfoResponse
         class Representation < Google::Apis::Core::JsonRepresentation; end
       
         include Google::Apis::Core::JsonObjectSupport
       end
       
       class ProjectBillingInfo
+        class Representation < Google::Apis::Core::JsonRepresentation; end
+      
+        include Google::Apis::Core::JsonObjectSupport
+      end
+      
+      class BillingAccount
         # @private
         class Representation < Google::Apis::Core::JsonRepresentation
-          property :billing_enabled, as: 'billingEnabled'
+          property :display_name, as: 'displayName'
           property :name, as: 'name'
-          property :project_id, as: 'projectId'
-          property :billing_account_name, as: 'billingAccountName'
+          property :open, as: 'open'
+        end
+      end
+      
+      class ListBillingAccountsResponse
+        # @private
+        class Representation < Google::Apis::Core::JsonRepresentation
+          collection :billing_accounts, as: 'billingAccounts', class: Google::Apis::CloudbillingV1::BillingAccount, decorator: Google::Apis::CloudbillingV1::BillingAccount::Representation
+      
+          property :next_page_token, as: 'nextPageToken'
         end
       end
       
@@ -65,21 +73,13 @@ module Google
         end
       end
       
-      class ListBillingAccountsResponse
+      class ProjectBillingInfo
         # @private
         class Representation < Google::Apis::Core::JsonRepresentation
-          property :next_page_token, as: 'nextPageToken'
-          collection :billing_accounts, as: 'billingAccounts', class: Google::Apis::CloudbillingV1::BillingAccount, decorator: Google::Apis::CloudbillingV1::BillingAccount::Representation
-      
-        end
-      end
-      
-      class BillingAccount
-        # @private
-        class Representation < Google::Apis::Core::JsonRepresentation
-          property :display_name, as: 'displayName'
-          property :open, as: 'open'
+          property :billing_account_name, as: 'billingAccountName'
+          property :billing_enabled, as: 'billingEnabled'
           property :name, as: 'name'
+          property :project_id, as: 'projectId'
         end
       end
     end

@@ -43,7 +43,7 @@ module Google
         attr_accessor :quota_user
 
         def initialize
-          super('https://firebasedynamiclinks.googleapis.com/', '')
+          super('https://firebasedynamiclinks-ipv6.googleapis.com/', '')
           @batch_path = 'batch'
         end
         
@@ -72,7 +72,7 @@ module Google
         # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
         # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
         # @raise [Google::Apis::AuthorizationError] Authorization is required
-        def create_short_link_short_dynamic_link(create_short_dynamic_link_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
+        def create_short_link(create_short_dynamic_link_request_object = nil, fields: nil, quota_user: nil, options: nil, &block)
           command =  make_simple_command(:post, 'v1/shortLinks', options)
           command.request_representation = Google::Apis::FirebasedynamiclinksV1::CreateShortDynamicLinkRequest::Representation
           command.request_object = create_short_dynamic_link_request_object
